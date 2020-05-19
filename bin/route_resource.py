@@ -157,7 +157,6 @@ class Router():
                 timeout = 10)
             ResourceV3Index.init()              # Initialize it if it doesn't exist
         else:
-            self.logger.info('Warehouse elastichost=NONE')
             self.ESEARCH = None
 
         # Initialize application variables
@@ -420,8 +419,7 @@ class Router():
                             Audience = self.Affiliation,
                      )
                 resource.save()
-                if self.ESEARCH:
-                    resource.indexing()
+                resource.indexing()
             except Exception as e:
                 msg = '{} saving resource ID={}: {}'.format(type(e).__name__, myGLOBALURN, e)
                 self.logger.error(msg)
@@ -500,8 +498,7 @@ class Router():
                             Audience = self.Affiliation,
                      )
                 resource.save()
-                if self.ESEARCH:
-                    resource.indexing()
+                resource.indexing()
             except Exception as e:
                 msg = '{} saving resource ID={}: {}'.format(type(e).__name__, myGLOBALURN, e)
                 self.logger.error(msg)
@@ -571,8 +568,7 @@ class Router():
                             Audience = self.Affiliation,
                      )
                 resource.save()
-                if self.ESEARCH:
-                    resource.indexing()
+                resource.indexing()
             except Exception as e:
                 msg = '{} saving resource ID={}: {}'.format(type(e).__name__, myGLOBALURN, e)
                 self.logger.error(msg)
@@ -654,8 +650,7 @@ class Router():
                             Audience = self.Affiliation,
                      )
                 resource.save()
-                if self.ESEARCH:
-                    resource.indexing(myNEWRELATIONS)
+                resource.indexing(myNEWRELATIONS)
             except Exception as e:
                 msg = '{} saving resource ID={}: {}'.format(type(e).__name__, myGLOBALURN, e)
                 self.logger.error(msg)
@@ -741,8 +736,7 @@ class Router():
                             Audience = self.Affiliation,
                      )
                 resource.save()
-                if self.ESEARCH:
-                    resource.indexing(myNEWRELATIONS)
+                resource.indexing(myNEWRELATIONS)
             except Exception as e:
                 msg = '{} saving resource ID={}: {}'.format(type(e).__name__, myGLOBALURN, e)
                 self.logger.error(msg)
@@ -851,8 +845,7 @@ class Router():
                             Audience = self.Affiliation,
                      )
                 resource.save()
-                if self.ESEARCH:
-                    resource.indexing(myNEWRELATIONS)
+                resource.indexing(myNEWRELATIONS)
             except Exception as e:
                 msg = '{} saving resource ID={}: {}'.format(type(e).__name__, myGLOBALURN, e)
                 self.logger.error(msg)
@@ -945,8 +938,7 @@ class Router():
                             Audience = self.Affiliation,
                      )
                 resource.save()
-                if self.ESEARCH:
-                    resource.indexing(myNEWRELATIONS)
+                resource.indexing(myNEWRELATIONS)
             except Exception as e:
                 msg = '{} saving resource ID={}: {}'.format(type(e).__name__, myGLOBALURN, e)
                 self.logger.error(msg)
@@ -1058,8 +1050,7 @@ class Router():
                             Audience = self.Affiliation,
                      )
                 resource.save()
-                if self.ESEARCH:
-                    resource.indexing(myNEWRELATIONS)
+                resource.indexing(myNEWRELATIONS)
             except Exception as e:
                 msg = '{} saving resource ID={}: {}'.format(type(e).__name__, myGLOBALURN, e)
                 self.logger.error(msg)
@@ -1133,8 +1124,7 @@ class Router():
                             Audience = self.Affiliation,
                      )
                 resource.save()
-                if self.ESEARCH:
-                    resource.indexing(myNEWRELATIONS)
+                resource.indexing(myNEWRELATIONS)
             except Exception as e:
                 msg = '{} saving resource ID={}: {}'.format(type(e).__name__, myGLOBALURN, e)
                 self.logger.error(msg)
